@@ -1,0 +1,75 @@
+<!--
+    File name     : add_edit.ejs
+    Student's name: Matheus Teixeira
+    Student's ID  : 301236904
+    Date          : October 29, 2022
+    author        : Julio Vinicius
+    edited by     : Matheus Teixeira
+-->
+<%- include ../partials/header %>
+
+<!-- Content for the Add_Edit page -->
+<main>
+    <div>
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= item._id %>"
+                    >
+                    <label for="nameTextField">Name</label>
+                    <input type="text" class="form-control"
+                        id="nameTextField"
+                        placeholder="Enter the contact Name"
+                        name="name" 
+                        value="<%= item.name %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="numberTextField">Phone Number</label>
+                    <input type="text" class="form-control"
+                    id="numberTextField"
+                    placeholder="000-000-0000"
+                    name="number" 
+                    value="<%= item.number %>"
+                    required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="emailTextField">E-mail</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    placeholder="name@provider.ca"
+                    name="email" 
+                    value="<%= item.email %>"
+                    >
+                </div>
+                <br/>
+
+                <button class="btn btn-primary" type="submit" style="margin-bottom: 20px;">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/businesslist/list" class="btn btn-warning" style="color: black;margin-bottom: 20px;">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+                <% if (title == "Edit Item"){ %>
+                    <a href="/businesslist/delete/<%= item._id %>" class="btn btn-danger btn-sm"  style="margin-bottom: 20px; padding: 8px 12px;">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                <% } %>
+
+
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<%- include ../partials/footer %>

@@ -1,0 +1,20 @@
+/* File name     : list.css
+** Student's name: Matheus Teixeira
+** Student's ID  : 301236904
+** Date          : October 08, 2022
+ */
+/* table */
+caption {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table {
+	border: 1px dotted #CCCCCC;
+	border-collapse: collapse;
+    margin:10px;
+}
+
+td {
+	border: 1px dotted #CCCCCC;
+    padding: 10px;
+}

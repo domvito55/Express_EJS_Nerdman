@@ -1,0 +1,337 @@
+/* File name     : main.css
+** Student's name: Matheus Teixeira
+** Student's ID  : 301236904
+** Date          : October 08, 2022
+ */
+
+/* General stuff */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: #c0c0c0;
+    background-color: #00000A;
+}
+
+#wrapper {
+    background-image: radial-gradient(#610708,#3f0813);
+}
+
+h1 {
+    margin: 0.5em;
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+}
+
+h2 {
+    margin: 0.5em;
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+}
+  
+h3, h4, h5{
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+}
+
+td{
+    vertical-align:top;
+}
+
+p {
+    margin: 1em;
+    text-indent: 0.4in;
+}
+
+a{
+    color:#fff;
+}
+
+a:visited{
+    color:#fbeb69;
+}
+/* header */
+header {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* nav */
+nav {
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+}
+
+.sub{
+    font-size: 0.6em;
+    padding: 0;
+    margin: -0.6em;
+
+    text-indent: 0;
+    height: fit-content;
+    line-height: 0.65em;
+}
+
+nav ul {
+    list-style-image: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: linear-gradient(#fbeb69,#e2ac0c,#af7801,#4e361a);
+}
+
+nav a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    padding: 0.3em;
+    display: block;
+}
+
+nav a:link {
+    color: #c0c0c0;
+}
+
+nav a:visited {
+    color: #c0c0c0;
+}
+
+nav a:hover {
+    background-image: linear-gradient(#4e361a,#af7801,#e2ac0c,#fbeb69);
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+      margin: 0;
+    border: #fefffd solid 2px;
+    border-radius: 20px;
+}
+
+.current a {
+  color:#fefffd;
+  text-shadow: 0px 0px 5px #7ad3fb;
+}
+
+.current a:link {
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+}
+
+.current a:visited {
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+}
+
+.current a:hover {
+  color:#fefffd;
+  text-shadow: 0px 0px 5px #7ad3fb;
+  background-image: linear-gradient(#fbeb69,#e2ac0c,#af7801,#4e361a);
+}
+
+/* forms */
+form {
+    border: none;
+    color: white;
+    padding: 1px;
+    width: 100%;
+}
+
+fieldset {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    text-align: center;
+}
+
+fieldset div {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+}
+
+input{
+    width:97%;
+}
+
+.button {
+    text-align: center;
+    background-image: linear-gradient(#fbeb69,#e2ac0c,#af7801,#4e361a);
+    color:#fefffd;
+    text-shadow: 0px 0px 5px #7ad3fb;
+    font: 15px Arial;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border-color:#fff;
+}
+
+.buttonDiv{
+    text-align: center;
+}
+
+/*validation*/
+input:invalid{
+    border: #7310E7 5px groove;
+}
+
+input[type=text]:valid, input[type=email]:valid, input[type=password]:valid{
+    border: none;
+}
+
+select:invalid{
+    border: #7310E7 5px groove;
+}
+
+select:valid{
+    border: none;
+}
+
+
+/* References */
+.reference {
+    text-indent: -4%;
+    padding-left: 4%;
+}
+
+
+/*################################### Middle screen ###################################*/
+@media (min-width: 650px) {
+    #wrapper {
+        width: 90%;
+        margin: auto;
+        max-width: 1200px;
+    }
+
+    header {
+        border-image: linear-gradient(#fbeb69,#e2ac0c,#af7801,#4e361a)1;
+        border-width: 2px;
+        border-style: solid;
+        
+        position: sticky;
+        top: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: stretch;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        width: 33.333333333%;
+    }
+
+    .single {
+        line-height: 2.1em;
+        height: 100%;
+        font-size: large;
+    }
+
+    .current {
+        border-bottom: none;
+    }
+
+    .current a {
+        border: none
+    }
+
+    .current a:link {
+        border: none
+    }
+
+    .current a:visited {
+        border: none
+    }
+
+    .current a:hover {
+        border: none
+    }
+
+    main {
+        border-image: linear-gradient(#4e361a,#af7801,#e2ac0c,#fbeb69)1;
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    fieldset {
+        margin-left: auto;
+        margin-right: auto;
+        width: 82%;
+    }
+
+    label {
+        margin: 0;
+        padding: 0;
+        clear:both;
+        width: 160px;
+        float: left;
+        text-align: right;
+    }
+
+    input{
+        width:54%;
+        margin: 0;
+        padding: 0;
+      }
+
+}
+
+/*################################### Big screen ###################################*/
+@media (min-width: 1024px) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+
+        width: 75%;
+        margin: auto;
+        max-width: 1200px;
+    }
+
+    header {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2
+    }
+
+    .single {
+        line-height: 1.7em;
+        height: 100%;
+        font-size: x-large;
+    }
+
+    nav a {
+        font-size: larger;
+    }
+
+    main {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    fieldset {
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+    }
+
+    footer {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+}

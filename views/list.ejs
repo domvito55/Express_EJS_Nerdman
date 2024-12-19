@@ -1,0 +1,84 @@
+<!--Student Name: Matheus Teixeira - Student ID: 301236904
+----Template to be used either by the projects list, or services list
+-->
+<% include partials/header.ejs %>
+<main>
+    <table>
+        <caption><h2><%= caption %></h2></caption>
+        <tr>
+            <td style="vertical-align: middle; text-align: center;"  width="50%">
+                <br>
+                <a href=<%= img2_ref %>>
+                    <img alt=<%= img2_alt %> src=<%= img2_src %> width="100%">
+                </a>
+                <% if (title == "ListProjects") { %>
+                <br><br><br>
+                <a href="http://studentweb.cencol.ca/mferre39/Comp125/Assignment5/assignment5.html">
+                    <img alt="Simple Game" src="/images/Slap.png" width="100%">
+                </a>
+                <% } %>
+                <br>
+            </td>
+            <td>
+                <h4><%= row2_title %></h4>
+                <p><%= row2_desc %> <a href=<%= img2_ref %>><%= link %></a></p>
+                <% if (title == "ListProjects") { %>
+                    <h4>What to check?</h4>
+                    <p> One of the funniest projects that I have made was a simple game.
+                        To score, you need to slap my JavaScript professor's face.
+                        Every time you hit him, he tries to hide faster, so the game becomes harder.
+                        <a href="http://studentweb.cencol.ca/mferre39/Comp125/Assignment5/assignment5.html">
+                            Game.
+                        </a>
+                    </p>
+                <% } %>
+            </td>
+        </tr>
+        <tr>
+                <td style="vertical-align: middle; text-align: center;"  width="50%">
+                    <br>
+                    <a href=<%= img1_ref %>>
+                        <img alt=<%= img1_alt %> src=<%= img1_src %> width="100%">
+                    </a>
+                    <% if (title == "ListProjects") { %>
+                    <br><br><br>
+                    <a href="http://studentweb.cencol.ca/mferre39/Comp213/IndividualProject/index.html">
+                        <img alt="COMP 213 Final Project" src="/images/HTML_Final.png" width="100%">
+                    </a>
+                    <% } %>
+                    <br>
+                </td>
+                <td>
+                    <h4><%= row1_title %></h4>
+                    <p><%= row1_desc %> <a href=<%= img1_ref %>><%= link %></a></p>
+                    <% if (title == "ListProjects") { %>
+                        <h4>What to check?</h4>
+                        <p> The final project for that course was a Complete Responsive
+                            Website for an imaginary realtor. That website should have at least 7 pages,
+                            a light color scheme, a form, and a sitemap. The website has 3 different
+                            views, and looks great on a cellphone, on a tablet, or on a bigger screen.
+                            <a href="http://studentweb.cencol.ca/mferre39/Comp213/IndividualProject/index.html">
+                                Final Project.
+                            </a>
+                        </p>
+                    <% } %>
+                </td>
+            </tr>
+            <% if (title == "ListProjects") { %>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"  width="50%">
+                        <br>
+                        <a href=<%= img0_ref %>>
+                            <img alt=<%= img0_alt %> src=<%= img0_src %> width="100%">
+                        </a>
+                        <br>
+                    </td>
+                    <td>
+                        <h4><%= row0_title %></h4>
+                        <p><%= row0_desc %> <a href=<%= img0_ref %>>GitHub.</a></p>
+                    </td>
+                </tr>
+            <% } %>
+    </table>
+<main>
+<% include partials/footer.ejs %>

@@ -1,0 +1,48 @@
+<!--
+    File name     : list.ejs
+    Student's name: Matheus Teixeira
+    Student's ID  : 301236904
+    Date          : October 29, 2022
+    author        : Julio Vinicius
+    edited by     : Matheus Teixeira
+-->
+<%- include ../partials/header %>
+
+    <!-- <%= businesslistList %> -->
+
+  <!-- Main Content -->
+  <main>
+            <a href="/businesslist/add" class="btn btn-primary align-self-end" role="button" style="float: left; margin-top: 10px;">
+            <i class="fa-solid fa-square-plus"></i>
+            Add a new contact
+            </a>
+            <h2 style="text-align: center; text-indent: -10%;"><%= title %></h2>
+            <table class="table table-bordered"  style="color:white;">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Phone Number</th>
+                    <th class="text-center">E-mail</th>
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let i = 0; i < businesslistList.length; i++) { %>
+                    <tr>
+                        <td class="text-center"><%= businesslistList[i].name %></td>
+                        <td class="text-center"><%= businesslistList[i].number %></td>
+                        <td class="text-center"><%= businesslistList[i].email %></td>
+                        <td class="text-center">
+                            <a href="/businesslist/edit/<%= businesslistList[i]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/businesslist/delete/<%= businesslistList[i]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+  </main>
+<%- include ../partials/footer %>

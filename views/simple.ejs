@@ -1,0 +1,140 @@
+<!--Student Name: Matheus Teixeira - Student ID: 301236904
+----Template to be used by simple pages like the home page or the about me page.
+-->
+<% include partials/header.ejs %>
+
+    <% if (title == "Home") { %>
+      <main>
+        <h1 style="text-align: center;">Welcome</h1>
+        <p>Hello, dear visitant! This site was written to serve as personal portifolio.
+            Here you will be able to learn about my previous projects, about myself and the
+            services that I can provide.
+        </p>
+        <p>And, if you are wondering, yes, I have designed
+            a color scheme inspired on Mavel's Ironman because I am a fan!
+            </small>
+        </p>
+        <h2 style="text-align: center;">Mission</h2>
+        <p style="margin-bottom: 1em;">To be the best developer in my working field, take honesty and excellence as fundaments.</p>
+      </main>
+    <% } else if (title == "About"){ %>
+        <main>
+            <div style="margin:5px">
+                <hr>
+                <h3 style="text-align: center;">Summary</h2>
+                <small>
+                    <table>
+                        <tr>
+                            <td width="42%">
+                                <ul>
+                                    <li>Student of Artificial Intelligence<br>
+                                        [Current GPA: 4.46]
+                                    </li>
+                                </ul>
+                            </td>
+                            <td width="58%" colspan="2">
+                                <ul>
+                                    <li>Knowledgeable of: Python, JavaScript, SQL, HTML/CSS, Linux,
+                                        C, C#, Java, Angular, Node.js, SQL, GCL+, Bacnet, MODBUS,
+                                        Assembly MIPS, VHDL, GitHub...
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Bachelor of Engineering - Control & Automation</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Multilingual in Portuguese and English</li>
+                                </ul>
+                            </td>
+                            <td rowspan="2">
+                                <a href="/doc/Resume_Matheus.pdf"><button class="button">Resume</button></a>
+                                <a href="/businesslist/list"><button class="button">Business List</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>10 years of professional experience in engineering sectors<br>
+                                        [including with NASA (USA)]
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        High IQ: ex-member of Mensa - Brazil<br>
+                                        [top 2.14% of the population]
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </small>
+                <hr>
+            </div>
+            <div style="margin:5px">
+                <img src="./images/Abroad.JPG" alt="profile picture" height="200px"  style="float:left;margin:1em;margin-top: 0;">
+                <h2>Introduction</h2>
+                <p> My name is Matheus Vinicius Ferreira Figueiredo Teixeira.
+                    I am a student of software engineering, specializing in Artificial Intelligence, but
+                    I also bring with me a professional background in mechatronics engineering,
+                    having worked in NASA (USA), where I had the opportunity to develop software in
+                    Python, as well as various experiences within control and automation. I believe my
+                    technical aptitude, critical thinking skills and personal attributes will be a
+                    valuable addition to any team.
+                    </p>
+            </div>
+            <div style="margin:5px; clear: both;">
+                <h2>Career</h2>
+                <img src="./images/NASA.png" alt="profile picture" height="200px"  style="float:right;margin:1em">
+                <p>
+                    During my Bachelor of Engineering degree, I completed numerous software development
+                    courses and projects, using Assembly and C language under Linux environment, with a
+                    comprehensive one-year project using C. Through my work ethic and academic
+                    performance, I was granted an internship at NASA, where, I have learned Python and
+                    developed software for the onboard computer on the BOBCAT mission. Following this,
+                    I proceeded with building automation, using GCL+ language, Modbus, and BACnet objects
+                    and networks, implementing automation and access control systems for huge sites such
+                    as a three-tower bank headquarters; using either MySQL or SQL server, I have also
+                    implemented the databases and connected them to the access and automation systems, to
+                    hold, for example, visitors and employee’s information. For these systems, I have
+                    implemented the graphical user interface as well.
+                </p>
+                <div style="clear: both">
+                    <img src="./images/Safran.jpg" alt="profile picture" height="200px" style="clear: both; float:right;margin:1em;margin-top: 0;">
+                    <p>
+                        Most recently, I decided to focus my career on software development, and have
+                        enrolled in Software Engineering Technology - Artificial Intelligence Advanced
+                        Diploma. I have completed projects in HTML, CSS, JavaScript, C#, and shell script,
+                        achieving A+ scores across these courses. Currently, I am working with Node.JS,
+                        Angular, Express, Java, and Introduction to AI, in Python. Lastly, I am working as
+                        a Student Researcher, developing code in VHDL for a Landing Gear Controller. In any
+                        of my professional pursuits, I have consistently been commended for my keen ability
+                        to learn new skills. I made the code of some of the projects that I have developed
+                        available at my personal GitHub. One can also see some of the code I have written
+                        running live here.
+                    </p>
+                </div>
+            </div>
+            <div style="margin:5px; min-height: 210px;">
+                <img src="./images/Hobbies.jpg" alt="Hobbies" height="200px"  style="float:left;margin:1em;margin-top: 0.5em;margin-right: 2em;">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Camp: stare at the stars and going into waterfalls;</li>
+                    <li>Travel: to know new people and new cultures;</li>
+                    <li>Learn: especially, Astronomy and History;</li>
+                    <li>Music: I can sing and play the guitar;</li>
+                    <li>Watching series and movies;</li>
+                    <li>Adventures: try new stuff;</li>
+                </ul>
+            </div>
+        </main>
+    <% } %>   
+
+    <% include partials/footer.ejs %>

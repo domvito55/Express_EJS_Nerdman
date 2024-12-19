@@ -1,0 +1,91 @@
+<!--Student Name: Matheus Teixeira - Student ID: 301236904-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdman</title>
+    <% if ((title == "businesslist List")||(title == "Edit Item")||(title == "Add a new contact")||
+    (title == 'Sign-up Form')||(title == 'Sign-in Form')){ %>
+      <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+      <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+      <link rel="stylesheet" href="/css/main.css">
+    <% } else { %>
+      <link rel="stylesheet" href="/css/main.css">
+      <% if ((title == "ListProjects") || (title == "ListServices")){ %>
+        <link rel="stylesheet" href="/css/list.css">
+      <% } else if ((title == "Contact")||(title == 'Sign-up Form')){ %>
+        <link rel="stylesheet" href="/css/form.css">
+      <% } %>   
+    <% } %>   
+    <link rel="shortcut icon" href="/images/Nerdman25.png" type="image/x-icon"/>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+          <nav>
+            <ul>
+              <img src="/images/Nerdman25.png" alt="logo" style="float: left; height: 54px; margin: 0;padding: 0;">
+              <% if (title == "Home") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <a class="single" href="/">Home</a>
+              </li>
+
+              <% if (title == "About") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <a class="single" href="/about">About me</a>
+              </li>
+
+              <% if (title == "ListProjects") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <a class="single" href="/projects">Projects</a>
+              </li>
+
+              <% if (title == "ListServices") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <a class="single" href="/services">Services</a>
+              </li>
+
+              <% if (title == "Contact") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <a class="single" href="/contact">Contact</a>
+              </li>
+
+              <% if (title == "signup") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <a class="single" href="/users/signup">Sign Up</a>
+              </li>
+
+              <% if (title == "login") { %>
+                <li class="current">
+              <% } else { %>
+                <li>
+              <% } %>
+                <% if (typeof userName == 'string' && userName) { %>
+                  <a class="single" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out<p class="sub">(<%= userName %>)</p></a>
+                <% } else { %>
+                  <a class="single" href="/users/signin">Sign in</a>
+                <% } %>            
+              </li>
+            </ul>
+          </nav>
+        </header>
